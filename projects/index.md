@@ -18,22 +18,33 @@ tags: [Agent, 项目实战, 智能体]
 | [数据自动标签化](./03-auto-labeling.md) | ⭐⭐⭐ | LangChain.js + zod | 2 周 |
 | [Text-to-SQL](./04-text-to-sql.md) | ⭐⭐⭐ | LangChain.js + SQLite | 3 周 |
 | [数据可视化](./05-data-viz.md) | ⭐⭐⭐ | Vercel AI SDK + ECharts | 3 周 |
+| [Chat BI 语义层](./06-chat-bi/01-overview.md) | ⭐⭐⭐⭐ | TypeScript + AI SDK + zod + SQLite | 3 周 |
+
+Chat BI 是一个拆成 5 篇的系列，复刻 [SuperSonic](https://github.com/tencentmusic/supersonic) 的核心思路：
+
+1. [概述：为什么 Text2SQL 不够可靠](./06-chat-bi/01-overview.md)
+2. [语义建模：给数据一本"业务词典"](./06-chat-bi/02-semantic-modeling.md)
+3. [链路拆解：一句话到 SQL 的五步旅程](./06-chat-bi/03-pipeline.md)
+4. [加一个智能体循环：让它自己纠错](./06-chat-bi/04-agent-loop.md)
+5. [验证：用评测集抓"静默错误"](./06-chat-bi/05-eval.md)
+
+配套可运行代码在仓库 `examples/mini-chatbi/`（`npm run seed` / `npm run ask` / `npm run eval`）。
 
 ---
 
-## 项目结构模板
+## 文档组织约定
 
-每个项目文件夹包含以下内容：
+单篇能讲完的项目就是一个编号 Markdown 文件；需要拆成系列的建一个编号目录，内部再按 `01-`、`02-` 编号，并用 `_category_.json` 设置分类标题：
 
 ```
-project-name/
-├── index.md              # 项目概述与目标
-├── 01-requirements.md    # 需求分析
-├── 02-architecture.md    # 架构设计
-├── 03-implementation.md  # 核心实现
-├── 04-testing.md         # 测试方案
-├── 05-deployment.md      # 部署指南
-└── 06-summary.md         # 总结与优化
+projects/
+├── 01-backend-automation.md   # 单篇项目
+├── ...
+├── 05-data-viz.md
+└── 06-chat-bi/                # 系列项目
+    ├── _category_.json
+    ├── 01-overview.md
+    └── ...
 ```
 
 ## 技术选型建议
