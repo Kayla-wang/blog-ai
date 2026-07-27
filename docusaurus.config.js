@@ -14,10 +14,11 @@ const config = {
   },
 
   url: isPages ? 'https://kayla-wang.github.io' : 'https://your-domain.com',
-  baseUrl: isPages ? '/personal-blog-ai/' : '/',
+  // GitHub Pages 路径大小写敏感，必须与仓库规范名 Personal-Blog-AI 完全一致
+  baseUrl: isPages ? '/Personal-Blog-AI/' : '/',
 
   organizationName: 'Kayla-wang',
-  projectName: 'personal-blog-ai',
+  projectName: 'Personal-Blog-AI',
 
   customFields: {
     enableChat: !isPages,

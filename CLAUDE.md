@@ -80,7 +80,9 @@ Docusaurus 只扫描 `docs/`、`projects/`、`src/`、`static/`，所以此目�
 
 ### GitHub Pages 镜像（`.github/workflows/gh-pages.yml`）
 
-以 `DEPLOY_TARGET=pages` 构建并发布到 Pages。`docusaurus.config.js` 顶部的 `isPages` 开关据此切三处：`url`/`baseUrl` 改成 `https://kayla-wang.github.io` + `/personal-blog-ai/`，以及 `customFields.enableChat: false` 关掉聊天组件（Pages 纯静态无后端）。
+以 `DEPLOY_TARGET=pages` 构建并发布到 Pages。`docusaurus.config.js` 顶部的 `isPages` 开关据此切三处：`url`/`baseUrl` 改成 `https://kayla-wang.github.io` + `/Personal-Blog-AI/`，以及 `customFields.enableChat: false` 关掉聊天组件（Pages 纯静态无后端）。
+
+`baseUrl` 的大小写必须和 GitHub 仓库规范名 `Personal-Blog-AI` 完全一致 —— Pages 的路径大小写敏感，写成 `/personal-blog-ai/` 会让镜像站所有资源 404（浏览器控制台报 "We suggest trying baseUrl = /Personal-Blog-AI/"）。注意 `git remote -v` 里是小写，那只是 GitHub 的大小写不敏感重定向，不能作为依据；规范名以 `https://api.github.com/repos/Kayla-wang/personal-blog-ai` 返回的 `name` 字段为准。
 
 **改配置时注意**：任何与 url / baseUrl / 聊天相关的改动都要顺着 `isPages` 两个分支都想一遍，否则镜像站会坏链或出现连不通的聊天窗。本地默认按自托管分支构建（`url` 仍是占位的 `https://your-domain.com`）。
 

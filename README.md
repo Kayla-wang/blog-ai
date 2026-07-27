@@ -67,7 +67,7 @@ npm test               # vitest
 
 ### 2. GitHub Pages 镜像（`.github/workflows/gh-pages.yml`）
 
-以 `DEPLOY_TARGET=pages` 构建，切换到 `https://kayla-wang.github.io/personal-blog-ai/` 的 url/baseUrl，并关闭 AI 聊天组件（Pages 是纯静态，没有后端）。
+以 `DEPLOY_TARGET=pages` 构建，切换到 `https://kayla-wang.github.io/Personal-Blog-AI/` 的 url/baseUrl，并关闭 AI 聊天组件（Pages 是纯静态，没有后端）。`baseUrl` 大小写须与仓库名 `Personal-Blog-AI` 一致，Pages 路径大小写敏感。
 
 ## 添加内容
 
