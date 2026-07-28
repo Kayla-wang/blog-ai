@@ -22,3 +22,6 @@ yarn-error.log*
 # Server
 server/.env
 server/node_modules
+
+# Superpowers skill 会话产物
+.superpowers

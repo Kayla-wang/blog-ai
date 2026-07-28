@@ -1,0 +1,12 @@
+# GitHub Linguist 语言统计覆写
+# 语法参考 https://github.com/github-linguist/linguist/blob/main/docs/overrides.md
+
+# examples/ 下是「项目实战 → Chat BI」系列的配套实现，属于真正的项目代码。
+# Linguist 默认把 ^[Ee]xamples?/ 归为 documentation 整个跳过，这里取消该排除。
+examples/** -linguist-documentation
+
+# 站点样式只是 Docusaurus 主题覆写，不代表项目语言，不参与统计。
+*.css linguist-detectable=false
+
+# brainstorm skill 的会话产物，不参与统计。
+.superpowers/** linguist-generated=true
