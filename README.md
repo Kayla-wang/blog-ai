@@ -2,6 +2,25 @@
 
 基于 Docusaurus 3.10 + React 19 构建的个人学习笔记站点，内容分「理论知识」与「项目实战」两块，带本地中英文搜索和一个 AI 聊天助手。
 
+🔗 **在线预览**：https://kayla-wang.github.io/Personal-Blog-AI/ （GitHub Pages 镜像，纯静态，未启用 AI 聊天）
+
+## 界面预览
+
+| 首页 | 理论知识（`/notes`） |
+|:--:|:--:|
+| ![首页](static/img/screenshots/01-home.png) | ![理论知识](static/img/screenshots/02-notes.png) |
+| 两块内容入口 | 八大分类 + 目录结构自动生成的侧边栏 |
+
+| 项目实战（`/projects`） | 正文页 |
+|:--:|:--:|
+| ![项目实战](static/img/screenshots/03-projects.png) | ![正文页](static/img/screenshots/04-article.png) |
+| 项目清单：难度、技术栈、预计时间 | 左侧目录 + 右侧本页锚点 |
+
+| 本地全文搜索 | 暗色模式 |
+|:--:|:--:|
+| ![搜索](static/img/screenshots/05-search.png) | ![暗色模式](static/img/screenshots/06-dark.png) |
+| 中英文分词，命中正文与代码块（构建后生效） | 全站跟随系统主题 |
+
 ## 站点内容
 
 | 板块 | 路由 | 内容目录 | 说明 |
